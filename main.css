@@ -1,0 +1,395 @@
+body{
+	background-color:beige;
+	color:black;
+	font-family:candara;
+	margin:0px 0px;
+}
+.site{
+	display:grid;
+	background-color:white;
+	grid-gap:3rem;
+	grid-template-rows:repeat(4,1fr);
+	grid-template-columns:1fr;
+	grid-template-areas:"header"
+						"about"
+						"project"
+						"skill"
+						"contact";
+}
+#home{
+	width:100vw;
+	grid-area:"header";
+	display:grid;
+	z-index:0;
+	grid-template-rows:100px 1fr;
+	grid-gap:1rem;
+	grid-template-columns:1fr;
+	grid-template-areas:"navbar"
+						"profile";
+}
+#navbar{
+	grid-area:"navbar";
+	z-index:1;
+} 
+.navbar-brand{
+	grid-area:"logo";
+	color:green;
+	font-family:verdana;
+	font-size:30px;
+	padding-left:100px;
+}
+
+nav li{
+	display:inline;
+	text-decoration:none;
+	padding-left:30px;
+	font-family:verdana;
+}
+a{
+	text-decoration:none;
+	color:green;
+	font-size:18px;
+}
+#profile{
+	grid-area:"profile";
+	display:flex;
+	flex-wrap:wrap;
+	flex:0 1 300px;
+	justify-content:space-around;
+}
+#profile img{
+	width:300px;
+	height:300px;
+	order:1;
+	flex-shrink:2;
+	align-self:center;
+	animation:dropIn 1s ease;
+}
+#text{
+	order:2;
+	line-height:0.5em;
+	align-self:center;
+	padding-top:30px;
+	animation:dropIn 2s;
+	padding-left:50px;	
+}
+#text p:nth-child(1){
+	font-size:1rem;
+	color:teal;
+}
+#text p:nth-child(2){
+	font-size:2rem;
+	color:midnightblue;
+}
+#about{
+	grid-area:"about";
+	display:grid;
+	grid-template-rows:100px 1fr;
+	grid-template-columns:1fr;
+	grid-template-areas:"title"
+						"body";
+	place-items:center;
+	color:darkslategray;
+}
+#title{
+	grid-area:"title";
+	font-size:30px;
+	color:teal;
+}
+#about-body{
+	grid-area:"body";
+	display:flex;
+	flex-wrap:wrap;
+	flex:0 1 300px;
+	
+	justify-content:center;
+	animation:drop-in 2s;
+}
+#aboout-word{
+	font-size:18px;
+	grid-area:"word";
+	word-spacing:1em;
+	line-height:1.8em;
+}
+#about-body p{
+	width:300px;
+	padding-top:100px;
+	line-height:1.8em;
+	
+}
+#about-body img{
+	grid-area:"pics";
+	height:400px;
+	width:400px;
+	animation:fadeInUp 2s;
+}
+#project{
+	grid-area:"project";
+	display:grid;
+	grid-template-columns:1r;
+	grid-template-rows:100px 1fr;
+	grid-template-areas:"title"
+						"project-body";
+	place-items:center;
+}
+#profile form{
+	display:flex;
+	flex-direction:columns;
+	grid-area:"text-form";
+}
+#profile button{
+	width:100px;
+	height:30px;
+	border-radius:20px;
+	background-color:yellow;
+	color:blue;
+	border:1px solid yellow;
+}
+#project-title{
+	grid-area:"title";
+	text-align:center;
+	font-size:30px;
+	color:teal;
+}
+#project-body{
+	grid-area:"project-body";
+}
+.carousel-item h5,p{
+	color:teal;
+}
+.carousel-item{
+	animation:slideIn 1s easeIn;
+}
+.carousel-indicators button{
+	color:teal;
+}
+#project-card{
+	width:100vw;
+	height:80vh;
+	display:flex;
+	justify-content:center;
+	box-shadow:3px 3px 1px 1px lightgray;
+	border-radius:10px;
+	border:1px lightgray;
+}
+#inner-card-1{
+	width:60vw;
+	height:50vh;
+	border-radius:10px;
+	background-color:blue;
+	box-shadow:5px 5px lightgray;
+	border:1px  solid blue;
+}
+#inner-card-2{
+	width:60vw;
+	height:50vh;
+	border-radius:10px;
+	background-color:red;
+	box-shadow:5px 5px lightgray;
+	border:1px  solid blue;
+}
+#inner-card-3{
+	width:60vw;
+	height:50vh;
+	border-radius:10px;
+	background-color:green;
+	box-shadow:5px 5px lightgray;
+	border:1px  solid blue;
+}
+#Skill{
+	grid-area:"skill";
+	width:100vw;
+	height:AUTO;
+	display:grid;
+	color:darkslategray;
+	grid-template-columns:1fr;
+	grid-template-rows:1fr auto;
+	grid-template-areas:"skill-title"
+						"skill-body";
+}
+#skill-title{
+	grid-area:"skill-title";
+	text-align:center;
+	font-size:30px;
+	color:teal;
+}
+#skill-word{
+	grid-area:"skill-body";
+	display:grid;
+	height:auto;
+	grid-gap:0.5rem;
+	grid-template-columns:repeat(auto-fit,minmax(300px,1fr));	
+	grid-template-rows:1fr;
+	/*rid-template-areas:"web design stack";*/
+	place-items:center;
+	animation:drop-in 2s;
+}
+#web-dev{
+	width:300px;
+	height:300px;
+	grid-area:"web";
+	height:300px;
+	border:2px solid lightgray;
+	border-radius:10px;
+	box-shadow:3px 3px 3px gainsboro;
+}
+#Stack{
+	grid-area:"stack";
+	width:300px;
+	height:300px;
+	border:2px solid lightgray;
+	border-radius:10px;
+	box-shadow:3px 3px 3px gainsboro;
+}
+#Design{
+	grid-area:"design";
+	width:300px;
+	height:300px;
+	border:2px solid lightgray;
+	border-radius:10px;
+	box-shadow:3px 3px 3px gainsboro;
+}
+#Skill li{
+	line-height:1.0em;
+}
+#web-dev-title{
+	text-align:center;
+}
+#Design-title{
+	text-align:center;
+}
+#stack-title{
+	text-align:center;
+}
+#Contact{
+	grid-area:"contact";
+	width:100vw;
+	height:80vh;
+	display:grid;
+	background-color:snow;
+	grid-template-rows:auto 1fr auto;
+	grid-template-columns:1fr;
+	grid-template-areas:"contact-title"
+						"contact-body"
+						"copyright";
+}
+#contact-title{
+	grid-area:"contact-title";
+	text-align:center;
+	color:teal;
+	font-size:30px;
+}
+#contact-body{
+	grid-area:"contact-body";
+	display:;
+	flex-direction:rows;
+	justify-content:space-evenly;
+}
+#info{
+	grid-area:"details";
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(300px,1fr));	
+	grid-template-rows:1fr;
+	place-items:center;
+	animation:drop-in 2s;
+}
+#in-details{
+	display:flex;
+	flex:rows wrap;
+	justify-content:space-around;
+}
+#info form{
+	width:300px;
+}
+#info label{
+	display:block;
+	color:teal;
+	padding-top:5px;
+	font-size:18px;
+}
+textarea{
+	width:200px;
+	height:150px;
+	border:2px solid teal;
+	border-radius:10px;
+}
+#info button{
+	width:50px;
+	height:30px;
+	border-radius:10px;
+	border:1px solid teal;
+	background-color:teal;
+	color:white;
+}
+#info button:hover{
+	background-color:white;
+	color:teal;
+}
+#info button:selected{
+	background-color:green;
+	color:purple;
+}
+
+#info input{
+	padding-top:20px;
+	width:150px;
+	height:30px;
+	border:1px solid teal;
+	border-radius:10px;
+}
+#social{
+	grid-area:"social";
+}
+#social form{
+	display:flex;
+	width:50vw;
+	padding-left:100px;
+	padding-bottom:50px;
+	flex-direction:columns;
+	justify-content:space-around;
+}
+#social button{
+	width:100%;
+	height:30px;
+	border-radius:20px;
+	background-color:yellow;
+	color:blue;
+	border:1px solid yellow;
+}
+#copy{
+	grid-area:"copyright";
+	background-color:teal;
+	color:white;
+	text-align:center;
+}
+
+@keyframes fadeInUp{
+	from{
+		opacity:0;
+		transform:translateY(20);
+	}
+	to{
+		opacity:1;
+		transform:translateY(0);
+	}
+}
+@keyframes dropIn{
+	from{
+		opacity:0;
+		transform:translateY(20);
+	} 
+	to{
+		opacity:1;
+		transform:translateY(0);
+	}
+}
+@keyframes slideIn{
+	from{
+		opacity:0;
+		transform:traslateX(0);
+	}
+	to{
+		opacity:0;
+		transform:traslateX(20);
+	}
+}
