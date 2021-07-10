@@ -173,24 +173,20 @@ a{
 	border:1px lightgray;
 }
 #inner-card-1{
-	width:60vw;
-	height:50vh;
+	
 	border-radius:10px;
 	background-color:blue;
 	box-shadow:5px 5px lightgray;
 	border:1px  solid blue;
 }
 #inner-card-2{
-	width:60vw;
-	height:50vh;
+	
 	border-radius:10px;
 	background-color:red;
 	box-shadow:5px 5px lightgray;
 	border:1px  solid blue;
 }
 #inner-card-3{
-	width:60vw;
-	height:50vh;
 	border-radius:10px;
 	background-color:green;
 	box-shadow:5px 5px lightgray;
