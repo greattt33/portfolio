@@ -173,7 +173,7 @@ a{
 	border:1px lightgray;
 }
 #inner-card-1{
-	background-image:url("Screenshot(2).png");
+	background-image:("Screenshot (2).png");
 	width:80vw;
 	height:50vw;
 	border-radius:10px;
