@@ -176,23 +176,29 @@ a{
 	background-image:url("Screenshot (2).png");
 	background-position:center;
 	background-size:cover;
-	width:80vw;
-	height:50vw;
+	width:60vw;
+	height:40vw;
 	border-radius:10px;
 	box-shadow:5px 5px lightgray;
 	border:1px  solid blue;
 }
 #inner-card-2{
-	width:80vw;
-	height:50vw;
-	border-radius:10px;
+	background-image:url("Screenshot (7).png");
+	background-position:center;
+	background-size:cover;
+	width:60vw;
+	height:40vw;
+	border-radius:10;
 	background-color:red;
 	box-shadow:5px 5px lightgray;
 	border:1px  solid blue;
 }
 #inner-card-3{
-	width:80vw;
-	height:50vw;
+	background-image:url("Screenshot (4).png");
+	background-position:center;
+	background-size:cover;
+	width:60vw;
+	height:40vw;
 	border-radius:10px;
 	background-color:green;
 	box-shadow:5px 5px lightgray;
